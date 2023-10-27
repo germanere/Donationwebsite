@@ -27,5 +27,5 @@ To deploy the project on your local machine, follow these steps:
 - Step 2: Use the SQL script provided in the "sql script" folder to set up the database.
 - Step 3: Install Apache Tomcat or a similar web server to deploy the Spring MVC application.
 - Step 4: Configure the database connection by modifying the information in the "jpaconfig.java" file to match your configuration.
-- Step 5: Run the application on the server (preferably Tomcat 9).
+- Step 5: Run on the server (preferably Tomcat 9).
 - Step 6: Access the application via web browser at `http://localhost:port` (where `port` is the port on which the web server is running).

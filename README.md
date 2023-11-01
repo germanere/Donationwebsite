@@ -7,6 +7,7 @@ The project utilizes the following technologies:
 - Programming language: Java
 - Framework: Spring MVC
 - Database: MySQL
+## Demo Link
 
 ## Functional Description
 The project includes the following functionalities:

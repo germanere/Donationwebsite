@@ -8,6 +8,7 @@ The project utilizes the following technologies:
 - Framework: Spring MVC
 - Database: MySQL
 ## Demo Link
+netfli.app
 
 ## Functional Description
 The project includes the following functionalities:

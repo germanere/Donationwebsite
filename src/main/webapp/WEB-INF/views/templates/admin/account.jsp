@@ -63,7 +63,7 @@
 						<li>
 							<hr class="dropdown-divider" />
 						</li>
-						<li><a class="dropdown-item" href="admin/logout">Logout</a></li>
+						<li><a class="dropdown-item" href="${pageContext.request.contextPath}/admin/logout">Logout</a></li>
 					</ul></li>
 			</ul>
 		</nav>
@@ -76,11 +76,11 @@
 					id="sidenavAccordion">
 					<div class="sb-sidenav-menu">
 						<div class="nav">
-							<a class="nav-link" href="admin/account">
+							<a class="nav-link" href="${pageContext.request.contextPath}/admin/account">
 								<div class="sb-nav-link-icon">
 									<i class="fas fa-tachometer-alt"></i>
 								</div> Quản lý người dùng
-							</a> <a class="nav-link" href="admin/donation">
+							</a> <a class="nav-link" href="${pageContext.request.contextPath}/admin/donation">
 								<div class="sb-nav-link-icon">
 									<i class="fas fa-tachometer-alt"></i>
 								</div> Quản lý đợt quyên góp

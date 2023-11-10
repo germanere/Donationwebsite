@@ -7,13 +7,9 @@ import com.entity.User;
 import com.entity.User_Donation;
 import com.service.DonationService;
 import com.service.RoleService;
-import com.service.UserDonationService;
 import com.service.UserService;
-//import com.dao.RoleDao;
 import com.entity.Donation;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,9 +19,6 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
-	@Autowired
-	private UserDonationService userDonationService;
-	
     @Autowired
     private UserService userservice;
     

@@ -58,7 +58,7 @@
             <a
               th:if="${session.admin}"
               class="nav-link dropdown-toggle"
-              href="/admin/login"
+              href="${pageContext.request.contextPath}/login"
               role="button"
               ><i class="fas fa-user fa-fw"></i><span> Logout</span></a
             >
@@ -71,7 +71,7 @@
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -82,13 +82,13 @@
           <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
               <div class="nav">
-                <a class="nav-link" href="admin/account">
+                <a class="nav-link" href="${pageContext.request.contextPath}/admin/account">
                   <div class="sb-nav-link-icon">
                     <i class="fas fa-tachometer-alt"></i>
                   </div>
                   Quản lý người dùng
                 </a>
-                <a class="nav-link" href="admin/donation">
+                <a class="nav-link" href="${pageContext.request.contextPath}/admin/donation">
                   <div class="sb-nav-link-icon">
                     <i class="fas fa-tachometer-alt"></i>
                   </div>

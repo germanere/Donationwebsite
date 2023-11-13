@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
 <head>
         <title>Donation website &mdash; Website Donation</title>
@@ -33,10 +34,8 @@
         <script src="${pageContext.request.contextPath}/static/user/assets/js/bootstrap-select.min.js"></script>
         <script src="${pageContext.request.contextPath}/static/user/assets/js/custom.js"></script>
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-                crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
       
     </head>
@@ -90,14 +89,13 @@
             <div class="row">
                 <div class="col-md-7">
                     <h1 class="text-white font-weight-bold">Danh sách các đợt quyên góp</h1>
-
+						
                 </div>
             </div>
         </div>
     </section>
     <section class="site-section">
         <div class="container">
-
             <div class="row mb-5 justify-content-center">
                 <div class="col-md-7 text-center">
                     <h2 class="section-title mb-2" >Các đợt quyên góp</h2>
@@ -105,63 +103,81 @@
             </div>
 
             <ul class="job-listings mb-5">
-                <th>
+
+					<c:forEach var="dnt1" items="${donations}">
                     <li style="margin-bottom: 20px" class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center ">
                         <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                             <div class="job-listing-position custom-width  mb-3 mb-sm-0" style="padding: 10px;width: 250px">
-                                <h2>Quyên góp mùa lũ</h2>
-                                <strong > Mới tạo </strong>
+                                <h2><a style="width:200px ;height: 65px;" href="/PRJ321_ASM01_4.0/Detail/${dnt1.code}"></a>${dnt1.name} - ${dnt1.code}</h2>                                                                  
                             </div>
+                            <div class="nut">
+								 <c:if test = "${dnt1.status==0}">
+                                <strong >CREATED</strong>	
+                            <div class="job-listing-meta custom-width w-20" >
+                                <p style="margin-top: 20px" class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#exampledonateModal${usd1.id}">Quyên góp</p>
+                                <p style="margin-top: 20px;background-color: white !important;" class="btn py-2"><span style="color: white">Quyên góp</span></p>
+                            </div>                                
+                                </c:if>
+                              	<c:if test = "${dnt1.status==1}">
+                                <strong >PROCESSING</strong>
+                            <div class="job-listing-meta custom-width w-20" >
+                                <p style="margin-top: 20px" class="btn btn-primary py-2" data-bs-toggle="modal" data-bs-target="#exampledonateModal${usd1.id}">Quyên góp</p>
+                                <p style="margin-top: 20px;background-color: white !important;" class="btn py-2"><span style="color: white">Quyên góp</span></p>
+                            </div>	                                
+                                </c:if>
+                              	<c:if test = "${dnt1.status==2}">
+                                <strong >END</strong>
+                                </c:if> 
+                              	<c:if test = "${dnt1.status==3}">
+                                <strong >CLOSE</strong>
+                                </c:if>
+                             </div>  
                             <div class="job-listing-location mb-3 mb-sm-0 custom-width w-10" style="padding: 10px;">
                                 Ngày bắt đầu<br>
-                                <strong th:text="${category.startDate}"></strong><br>
+                                <strong>${dnt1.dStart}</strong><br>
                             </div>
                             <div class="job-listing-location mb-3 mb-sm-0 custom-width w-10" style="padding: 10px;">
                                 Ngày kết thúc<br>
-                                <strong th:text="${category.endDate}"></strong><br>
+                                <strong>${dnt1.dEnd}</strong><br>
                             </div>
                             <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25" style="padding: 10px;">
-                                <span class="icon-room"></span> <span th:text="${category.organizationName}"></span><br>
-                                <strong th:text="${category.phoneNumber}"></strong><br>
-                            </div>
-                            <div class="job-listing-meta custom-width w-20" >
-                                <p style="margin-top: 20px" class="btn btn-primary py-2" data-toggle="modal">Quyên góp</p>
-                                <p style="margin-top: 20px;background-color: white !important;" class="btn py-2"><span style="color: white">Quyên góp</span></p>
+                                <span class="icon-room"></span> <span>${dnt1.dOrg}</span><br>
+                                <strong${dnt1.phonenum}></strong><br>
                             </div>
                         </div>
-
-                    </li>
-                    <!-- Modal -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        
+                         <!-- Modal -->
+	
+                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="exampledonateModal${usd1.id}">
                         <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                            <div class="modal-content">	
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Quyên góp: <span></span></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" data-bs-target="exampleModalLabel">
                                         <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    </button>	
                                 </div>
-                                <form method="post">
-                                    <div class="modal-body">
+                                
+                                <form action="adduserdonation" method="post" modelAttribute="userdonatedto">
+                                    <div class="modal-body" id="exampleModalLabel">
                                         <div class="row">
-
                                             <div class="col-12">
                                                 <label for="addname"
                                                        class="col-form-label">Họ tên:</label>
                                                 <input type="text" class="form-control"
-                                                       id="addname" name="name" placeholder="" required>
+                                                       id="addname" name="fullname" placeholder="" required>
                                                 <label for="addname"
                                                        class="col-form-label">Số tiền quyên góp:</label>
                                                 <input type="number" class="form-control" placeholder=""
                                                        id="addname" name="money" required>
                                                 <input type="hidden" class="form-control" placeholder=""
-                                                       id="addname" name="idUser" >
+                                                       id="addname" name="idUser" value="1" >
                                                 <input type="hidden" class="form-control" placeholder=""
-                                                       id="addname" name="idDonation" required>
+                                                       id="addname" name="idDonation" value = "${dnt1.id }" required>
 
                                                 <label for="addname"
                                                        class="col-form-label">Lời nhắn:</label>
-                                                    <textarea rows="10" cols="3" class="form-control" name="text">
+                                                    <textarea rows="10" cols="3" class="form-control" name="contain">
 
                                                 </textarea>
                                             </div>
@@ -170,23 +186,26 @@
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                                             <button type="submit" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Quyên góp</button>
+
                                         </div>
                                     </div>
                                 </form>
 
-
                             </div>
                         </div>
                     </div>
-                </th>
+	                    </c:forEach>
+                    </li>
+                   
+
                 <script>
                     function detail(id){
-                        window.location = '/donation/detail/' + id;
+                        window.location = "/donation/detail/"id;
                     }
                 </script>
             </ul>
 
-            <div class="row pagination-wrap">
+ 	            <div class="row pagination-wrap">
                 <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
 
                 </div>

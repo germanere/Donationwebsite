@@ -52,13 +52,21 @@ public class jpaconfig {
         return hibernateProperties;
     }
 
-    @Bean
-    public DataSource dataSource() {
+      @Bean
+      public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        String url = System.getenv("DB_URL");
+        String user = System.getenv("DB_USERNAME");
+        String pass = System.getenv("DB_PASSWORD");
+        
+        System.out.println("- DB_URL: " + url);
+        System.out.println("- DB_USERNAME: " + user);
+        System.out.println("- DB_PASSWORD: " + pass);
+
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/asm01?useSSL=true");
-        dataSource.setUsername("root");
-        dataSource.setPassword("@Ducnt24");
+        dataSource.setUrl(url);
+        dataSource.setUsername(user);
+        dataSource.setPassword(pass);
         return dataSource;
     }
 

@@ -3,5 +3,5 @@
    ENV DB_URL jdbc:mysql://monorail.proxy.rlwy.net:45833/railway?useSSL=true
    ENV DB_USERNAME root
    ENV DB_PASSWORD 2dgC3364gCB6bdfdH1-CDC4BEEae62AC
-   EXPOSE 10000
+   EXPOSE 8080
    CMD ["catalina.sh", "run"]

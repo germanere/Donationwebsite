@@ -7,7 +7,7 @@ The project utilizes the following technologies:
 - Programming language: Java
 - Framework: Spring MVC
 - Database: MySQL
-## Demo Link : 35.88.163.20/asm01/
+## Demo Link : https://donation-web-nlmetolt6a-et.a.run.app
 
 ## Functional Description
 The project includes the following functionalities:

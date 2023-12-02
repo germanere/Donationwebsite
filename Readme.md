@@ -22,7 +22,7 @@ The project includes the following functionalities:
 - Changing the status of a donation
 - Viewing detailed information of a donation
 - Deleting a donation in the newly created state
-- Sending activate email with new user in profile page
+- Sending activate email with new user in profile page (user click on link will be activate permission to use feature of system)
 
 ## Deployment Instructions
 To deploy the project on your local machine, follow these steps:

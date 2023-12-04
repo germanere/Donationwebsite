@@ -7,8 +7,9 @@ The project utilizes the following technologies:
 - Programming language: Java
 - Framework: Spring MVC
 - Database: MySQL
-## Demo Link
-netfli.app
+- Docker :docker.io/germane122/donation_web:latest
+  
+## Demo Link : https://donationweb-nlmetolt6a-as.a.run.app/
 
 ## Functional Description
 The project includes the following functionalities:
@@ -24,10 +25,11 @@ The project includes the following functionalities:
 
 ## Deployment Instructions
 To deploy the project on your local machine, follow these steps:
-
+There are 2 ways to deploy this software
+1.Deploy by using spring boot application
 - Step 1: Install Java Development Kit (JDK) and MySQL on your computer.
 - Step 2: Use the SQL script provided in the "sql script" folder to set up the database.
 - Step 3: Install Apache Tomcat or a similar web server to deploy the Spring MVC application.
-- Step 4: Configure the database connection by modifying the information in the "jpaconfig.java" file to match your configuration.
+- Step 4: Configure the database connection by modifying the information in the "appliant.properties" file to match your configuration.
 - Step 5: Run on the server (preferably Tomcat 9).
-- Step 6: Access the application via web browser at `http://localhost:port` (where `port` is the port on which the web server is running).
+- Step 6: Access the application via web browser at `http://localhost:8080/asm01` (where `asm01` is the context path on which the web server is running).

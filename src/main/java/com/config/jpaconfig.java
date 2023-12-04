@@ -52,8 +52,8 @@ public class jpaconfig {
         return hibernateProperties;
     }
 
-      @Bean
-      public DataSource dataSource() {
+    @Bean
+    public DataSource dataSource() {
         final DriverManagerDataSource dataSource = new DriverManagerDataSource();
         String url = System.getenv("DB_URL");
         String user = System.getenv("DB_USERNAME");

@@ -21,7 +21,7 @@ The project includes the following functionalities:
 - Searching for a donation based on personal phone number, organization name, and donation code
 - Changing the status of a donation
 - Viewing detailed information of a donation
-- Deleting a donation in the newly created state
+- Deleting a donation in the newly created
 - Donate quickly without using account
 
 ## Deployment Instructions

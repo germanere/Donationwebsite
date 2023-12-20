@@ -27,6 +27,7 @@ The project includes the following functionalities:
 ## Deployment Instructions
 To deploy the project on your local machine, follow these steps:
  - there are 2 way to deploy project
+
 1.Deploy by using spring boot application
 - Step 1: Install Java Development Kit (JDK) and MySQL on your computer.
 - Step 2: Use the SQL script provided in the "sql script" folder to set up the database.

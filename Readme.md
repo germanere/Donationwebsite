@@ -5,7 +5,7 @@ The charity donation project aims to raise awareness and support for difficult s
 
 The project utilizes the following technologies:
 - Programming language: Java
-- Framework: Spring MVC
+- Framework: Spring MVC,Spring Data JPA
 - Database: MySQL
 - Docker :docker.io/germane122/donation_web:latest
   

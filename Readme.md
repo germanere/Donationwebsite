@@ -12,7 +12,7 @@ The project utilizes the following technologies:
 ## Demo Link : https://donationweb-nlmetolt6a-as.a.run.app/
 
 ## Functional Description
-The project includes the following functionalities:
+The project includes the following functionalities :
 - Displaying a list of users
 - Adding, deleting, and updating user information
 - Searching for user information by phone number or email

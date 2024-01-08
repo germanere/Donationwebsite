@@ -22,7 +22,7 @@ The project includes the following functionalities :
 - Changing the status of a donation
 - Viewing detailed information of a donation
 - Deleting a donation in the newly created
-- Donate quickly without using account
+- Donate quickly without using account .
 
 ## Deployment Instructions
 To deploy the project on your local machine, follow these steps:

@@ -7,7 +7,6 @@ The project utilizes the following technologies:
 - Programming language: Java
 - Framework: Spring MVC,Spring Data JPA
 - Database: MySQL
-- Docker :docker.io/germane122/donation_web:latest
   
 ## Demo Link : https://donationweb-nlmetolt6a-as.a.run.app/
 

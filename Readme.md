@@ -38,4 +38,4 @@ To deploy the project on your local machine, follow these steps:
 2.Deploy by using dockerfile
 - Step 1 : In windows ,download docker desktop
 - Step 2 : using command docker build -t abc(name of project)
-- Step 3 : Open Docker Desktop and run it with port 8080
+- Step 3 : Open Docker Desktop and run it with port 8080 .

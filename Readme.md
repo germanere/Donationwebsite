@@ -25,7 +25,7 @@ The project includes the following functionalities :
 
 ## Deployment Instructions
 To deploy the project on your local machine, follow these steps: 
- - there are 2 way to deploy project
+ - there are 2 way to deploy project.
 
 1.Deploy by using spring boot application
 - Step 1: Install Java Development Kit (JDK) and MySQL on your computer.
@@ -38,4 +38,4 @@ To deploy the project on your local machine, follow these steps:
 2.Deploy by using dockerfile
 - Step 1 : In windows ,download docker desktop
 - Step 2 : using command docker build -t abc(name of project)
-- Step 3 : Open Docker Desktop and run it with port 8080
+- Step 3 : Open Docker Desktop and run it with port 8080.

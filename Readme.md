@@ -1,4 +1,4 @@
-# Charity Donation Project
+# Charity Donation Web Project
 
 ## Project Introduction
 The charity donation project aims to raise awareness and support for difficult situations that require help from benefactors and volunteers. It provides a platform for individuals to join hands and raise funds to assist those in need across the country. The project facilitates the management of donation rounds by the admin, allowing them to track donation status, amounts, and basic donor information. 

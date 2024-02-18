@@ -4,7 +4,7 @@
 The charity donation project aims to raise awareness and support for difficult situations that require help from benefactors and volunteers. It provides a platform for individuals to join hands and raise funds to assist those in need across the country. The project facilitates the management of donation rounds by the admin, allowing them to track donation status, amounts, and basic donor information. 
 
 The project utilizes the following technologies:
-- Programming language: Java
+- Programming language: Java ,HTML ,CSS
 - Framework: Spring MVC,Spring Data JPA
 - Database: MySQL
   

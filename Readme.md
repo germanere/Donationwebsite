@@ -15,7 +15,7 @@ The project includes the following functionalities :
 - Displaying a list of users
 - Adding, deleting, and updating user information
 - Searching for user information by phone number or email
-- Allowing/disallowing a user to use the system
+- Allow or permit a user to use the system
 - Displaying a list of donations
 - Searching for a donation based on personal phone number, organization name, and donation code
 - Changing the status of a donation
